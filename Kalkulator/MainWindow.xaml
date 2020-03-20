@@ -1,0 +1,44 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="800" Width="450">
+    <Grid>
+        <UniformGrid Columns = "1" >
+            <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" Grid.ColumnSpan="4">
+                <TextBlock x:Name="wynikPole" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row ="0" Grid.RowSpan="1" FontSize="35" TextAlignment="Center" TextWrapping="Wrap" Height="Auto"/>
+            </Border>            
+            <UniformGrid Rows="1">
+                <Button Content="CLEAR" Name="clear" Click="operator_Click" FontWeight="Bold"/>
+                <Button Content="BACK" Name ="back" Click="operator_Click" FontWeight="Bold"/>
+            </UniformGrid>            
+            <UniformGrid Rows="1">         
+                <Button Content="7" Name="siedem" Click="number_Click" FontSize="20"/>
+                <Button Content="8" Name="osiem" Click="number_Click" FontSize="20"/>
+                <Button Content="9" Name="dziewiec" Click="number_Click" FontSize="20"/>
+                <Button Content="x" Name="times" Click="operator_Click" FontSize="15"/>
+            </UniformGrid>
+            <UniformGrid Rows="1">
+                <Button Content="4" Name="cztery" Click="number_Click" FontSize="20"/>
+                <Button Content="5" Name="piec" Click="number_Click" FontSize="20"/>
+                <Button Content="6" Name="szesc" Click="number_Click" FontSize="20"/>
+                <Button Content="/" Name="divide" Click="operator_Click" FontSize="15"/>
+            </UniformGrid>
+            <UniformGrid Rows="1">
+                <Button Content="1" Name="jeden" Click="number_Click" FontSize="20"/>
+                <Button Content="2" Name="dwa" Click="number_Click" FontSize="20"/>
+                <Button Content="3" Name="trzy" Click="number_Click" FontSize="20"/>
+                <Button Content="-" Name="minus" Click="operator_Click" FontSize="15"/>
+            </UniformGrid>
+            <UniformGrid Rows="1">
+                <Button Content="." Name="kropka" Click="operator_Click" FontSize="15"/>
+                <Button Content="0" Name="zero" Click="number_Click" FontSize="20"/>
+                <Button Content="=" Name="equals" Click="operator_Click" FontSize="15"/>
+                <Button Content="+" Name="add" Click="operator_Click" FontSize="15"/>
+            </UniformGrid>
+        </UniformGrid>
+    </Grid>
+</Window>
